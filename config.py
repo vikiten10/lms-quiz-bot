@@ -1,7 +1,7 @@
-driver_path = r"C:\Program Files\Edge_driver\msedgedriver.exe"
-username = "710117205008"
-password = "johny"
-quiz_title = "BATCH 2017-2021 / IV YEAR / SEMESTER -VII / CSE & IT / CS8791 CLOUD COMPUTING/Mr.S.SARAVANAKUMAR"
+driver_path = r"Paste_your_driver_path"
+username = "Paste_your_reg_no"
+password = "Paste_your_password"
+quiz_title = "Paste_the_title_of_the_quiz_title"
 session_start =0
 session_end = 45
 any_specified_choice = True #mark it True if you want to choose a specified choice
