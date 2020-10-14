@@ -11,6 +11,10 @@ Requisites :
   
 Steps :
  * Install python interpreter and make sure to join PATH while installation.
+ 
+         * Python interpreter - https://www.python.org/downloads/
+         * quick python installation guide (follow till step 3) - https://phoenixnap.com/kb/how-to-install-python-3-windows
+         
  * Install selenium , run the command 'pip install selenium' in your cmd.
  * Check your chrome or edge(use revamped edge) versions and search for their webdrivers in the below sites,
  
