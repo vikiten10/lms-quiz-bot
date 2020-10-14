@@ -11,6 +11,7 @@ Requisites :
   
 Steps :
  * Install python interpreter and make sure to join PATH while installation.
+ * Install selenium , run the command 'pip install selenium' in your cmd.
  * Check your chrome or edge(use revamped edge) versions and search for their webdrivers in the below sites,
  
          * Chrome webdriver - https://chromedriver.chromium.org/downloads
