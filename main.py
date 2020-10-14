@@ -62,17 +62,24 @@ def quiz_clicker():
         mcqs = driver.find_elements_by_class_name("multichoice")
         for mcq in mcqs:
             choices = mcq.find_elements_by_css_selector("input[type='radio']")
+            choice_count = len(choices)
             if config.any_specified_choice :
+                if choice_count == 0:
+                    mcq.find_element_by_class_name("r0").find_element_by_tag_name("input").click()
 
-                if config.specified_choice < len(choices):
+                elif config.specified_choice <= len(choices):
                     choices[config.specified_choice].click()
 
                 else:
                     choices[0].click()
 
             else :
-                random_choice = choice(choices)
-                random_choice.click()
+                if choice_count == 0:
+                    driver.find_element_by_class_name("r0").find_element_by_tag_name("input").click()
+
+                else:
+                    random_choice = choice(choices)
+                    random_choice.click()
             # mcq.find_element_by_class_name("formulation").find_element_by_css_selector(f"input[type='radio'][value='{decided_choice}'']").click()
         driver.find_element_by_class_name("submitbtns").find_element_by_tag_name("input").click()
         final_submit = driver.find_elements_by_class_name("submitbtns")[-1]
@@ -97,7 +104,7 @@ for i in range(config.session_start,config.session_end+1):
         driver.find_element_by_link_text(f"Session {i} - Quiz").click()
 
     except NoSuchElementException:
-        print(f"There are no quiz in session - {i}")
+        print(f"There are no Session {i} - Quiz")
 
     else:
         quiz_value = driver.find_element_by_class_name("quizattempt")
