@@ -94,7 +94,7 @@ def quiz_clicker():
             pass
 
         finally:
-            driver.find_element_by_class_name("continuebutton").find_element_by_tag_name("input").click()
+            driver.find_element_by_class_name("continuebutton").click()
 
 
 
