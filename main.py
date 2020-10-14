@@ -97,7 +97,7 @@ for i in range(config.session_start,config.session_end+1):
         driver.find_element_by_link_text(f"Session {i} - Quiz").click()
 
     except NoSuchElementException:
-        print(f"There are no Session {i} - Quiz")
+        print(f"There are no quiz in session - {i}")
 
     else:
         quiz_value = driver.find_element_by_class_name("quizattempt")
